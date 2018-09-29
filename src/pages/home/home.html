@@ -1,39 +1,28 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Home</ion-title>
+    <ion-title>
+      Welcome
+    </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+<ion-content  class="card-background-page">
+  <ion-card>
+    <img src="assets/imgs/abkdlogo.JPG"/>
 
-  <ion-list>
-
-    <ion-item *ngFor="let word of words">
-      {{ word.text }}
-      <button ion-button outline color="secondary" item-right icon-right (click)="speak(word.text)">
-        Play
-        <ion-icon icon-only name="play"></ion-icon>
-      </button>
-    </ion-item>
-
-  </ion-list>
-
-    <body>
-        <span id="speech"></span>
-        <span id="interim"></span>
-    </body>
-
-    
-
-
-
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+        <button id="mombutton"ion-button icon-only large icon-start (click)="loginMom()">
+        </button>
+        <p>Mom</p>
+        </ion-col>
+        <ion-col>
+        <button id="babybutton" ion-button icon-only large icon-end (click)="loginBaby()">
+        </button>
+        <p>Baby</p>
+      </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
 </ion-content>

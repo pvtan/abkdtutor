@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { annyang } from 'annyang';
 import Speech from 'speak-tts';
+import { RewardsPage } from '../rewardspage/rewardspage';
 declare var annyang: any;
 
 @Component({
@@ -49,11 +50,14 @@ export class FlashcardPage {
         }, 1000);
        },
        'da': function() {
+          document.getElementById('symbol').src = "assets/imgs/star.jpeg";
+          document.getElementById('letter').style.visibility = 'hidden';
+          localStorage.setItem("isCompleted", 1);
           Speech.setLanguage('en-US');
           Speech.speak({
           text: 'You have completed level one. You will receive chocolates from mommy'
-       })
-     }
+       });
+       }
      };
 
      annyang.debug(true);
@@ -78,6 +82,10 @@ export class FlashcardPage {
  	document.getElementById('symbol').src = "assets/imgs/" + this.i + ".png";
  	document.getElementById('letter').src = "assets/imgs/" + this.i + ".JPG";
  	this.i++
+  }
+
+  goToReceive() {
+    this.navCtrl.push(ReceiveRewardPage);
   }
 
 }

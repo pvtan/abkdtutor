@@ -16,12 +16,10 @@ export class WelcomePage {
   }
 
   public loginMom(){
-    console.log("login mommy clicked");
     this.navCtrl.push(RewardsPage);
   }
 
   public loginBaby(){
-    console.log("login baby clicked");
     this.navCtrl.push(FlashcardPage);
   }
 

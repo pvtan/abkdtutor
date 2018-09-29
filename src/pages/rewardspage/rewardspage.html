@@ -31,6 +31,13 @@
           </ion-col>
           <ion-col>
             <ion-item><b>Status</b></ion-item>
+              <ion-item id="completed1">
+               <ion-input type="text" [(ngModel)]="completed1" id="completed1" placeholder="Not completed" [disabled]="true"></ion-input>
+              </ion-item>
+            <ion-item></ion-item>
+            <ion-item id="completed2">
+               <ion-input type="text" [(ngModel)]="completed2" id="completed2" placeholder="Not completed" [disabled]="true"></ion-input>
+              </ion-item>
           </ion-col>
         </ion-row>
       </ion-grid>
