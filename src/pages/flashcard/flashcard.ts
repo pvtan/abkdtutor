@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { annyang } from 'annyang';
-import Speech from 'speak-tts'
+import Speech from 'speak-tts';
 declare var annyang: any;
 
 @Component({
@@ -10,19 +10,43 @@ declare var annyang: any;
 })
 export class FlashcardPage {
   constructor(public navCtrl: NavController) {
-    Speech.init();
+  Speech.init();
+  Speech.setLanguage('es-US');
+    setTimeout (function(){
+      Speech.speak({
+        text: 'ah'
+      })
+    }, 1000);
     if (annyang) {
      // Let's define a command.
-
      var commands = {
-      'a': function() {
+      'ah': function() {
         document.getElementById('symbol').src = "assets/imgs/2.png";
+        document.getElementById('letter').src = "assets/imgs/2.JPG";
+        setTimeout (function(){
+          Speech.speak({
+          text: 'ba'
+        })
+        }, 1000);
+
        },
-       'e': function() {
+       'ba': function() {
         document.getElementById('symbol').src = "assets/imgs/3.png";
+        document.getElementById('letter').src = "assets/imgs/3.JPG";
+        setTimeout (function(){
+          Speech.speak({
+          text: 'ka'
+        })
+        }, 1000);
        },
-       'i': function() {
+       'ka': function() {
         document.getElementById('symbol').src = "assets/imgs/4.png";
+        document.getElementById('letter').src = "assets/imgs/4.JPG";
+        setTimeout (function(){
+          Speech.speak({
+          text: 'da'
+        })
+        }, 1000);
        },
        'o': function() {
         document.getElementById('symbol').src = "assets/imgs/5.png";

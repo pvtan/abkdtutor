@@ -8,14 +8,43 @@
 
 <ion-content>
     <ion-card>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <ion-item><b>Levels</b></ion-item>
+            <ion-item>Level 1</ion-item>
+            <ion-item></ion-item>
+            <ion-item>Level 2</ion-item>
+          </ion-col>
+          <ion-col>
+            <ion-item><b>Rewards</b></ion-item>
+                <ion-item id="reward1">
+     <ion-input type="text" [(ngModel)]="input1" placeholder="Enter Reward..." id="input1"></ion-input>
+     <button ion-button item-right (click)="addReward1()">Add</button>
+    </ion-item>
+            <ion-item id="reward1"></ion-item>
+                <ion-item id="reward2">
+     <ion-input type="text" [(ngModel)]="input2" placeholder="Enter Reward..." id="input2"></ion-input>
+     <button ion-button item-right (click)="addReward2()">Add</button>
+    </ion-item>
+            <ion-item id="reward2"></ion-item>
+          </ion-col>
+          <ion-col>
+            <ion-item><b>Status</b></ion-item>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+    <!--
       <ion-list>
         <ion-item>Chocolates</ion-item>
         <ion-item>Chocolates</ion-item>
         <ion-item id="output"></ion-item>
         <ion-item></ion-item>
-
       </ion-list>
+    -->
     </ion-card>
+
 
     <ion-item id="add">
      <ion-input type="text" [(ngModel)]="input" placeholder="Enter Reward..." id="input"></ion-input>
