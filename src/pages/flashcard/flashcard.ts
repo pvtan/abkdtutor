@@ -49,9 +49,11 @@ export class FlashcardPage {
         }, 1000);
        },
        'da': function() {
-        document.getElementById('symbol').src = "assets/imgs/5.png"; 
-        document.getElementById('letter').src = "assets/imgs/5.JPG"; 
-       }
+          Speech.setLanguage('en-US');
+          Speech.speak({
+          text: 'You have completed level one. You will receive chocolates from mommy'
+       })
+     }
      }; 
 
      annyang.debug(true);
