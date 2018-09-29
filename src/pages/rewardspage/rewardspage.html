@@ -19,12 +19,12 @@
           <ion-col>
             <ion-item><b>Rewards</b></ion-item>
                 <ion-item id="reward1">
-     <ion-input type="text" [(ngModel)]="input1" placeholder="Enter Reward..." id="input1"></ion-input>
+     <ion-input type="text" [(ngModel)]="input1" placeholder="Enter Reward..." id="input1" [disabled]="!isenabled"></ion-input>
      <button ion-button item-right (click)="addReward1()" [disabled]="!isenabled">Add</button>
     </ion-item>
             <ion-item id="reward1"></ion-item>
                 <ion-item id="reward2">
-     <ion-input type="text" [(ngModel)]="input2" placeholder="Enter Reward..." id="input2"></ion-input>
+     <ion-input type="text" [(ngModel)]="input2" placeholder="Enter Reward..." id="input2" [disabled]="!isenabled"></ion-input>
      <button ion-button item-right (click)="addReward2()" [disabled]="!isenabled">Add</button>
     </ion-item>
             <ion-item id="reward2"></ion-item>
