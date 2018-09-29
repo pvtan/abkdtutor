@@ -9,11 +9,20 @@
 <ion-content  class="card-background-page">
   <ion-card>
     <img src="assets/imgs/abkdlogo.JPG"/>
-    <button ion-button icon-only large icon-start (click)="loginMom()">
-      <ion-icon name="md-person"></ion-icon>
-    </button>
-    <button ion-button icon-only large icon-end (click)="loginBaby()">
-      <ion-icon name="md-egg"></ion-icon>
-    </button>
+
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+        <button id="mombutton"ion-button icon-only large icon-start (click)="loginMom()">
+        </button>
+        <p>Mom</p>
+        </ion-col>
+        <ion-col>
+        <button id="babybutton" ion-button icon-only large icon-end (click)="loginBaby()">
+        </button>
+        <p>Baby</p>
+      </ion-col>
+      </ion-row>
+    </ion-grid>
   </ion-card>
 </ion-content>

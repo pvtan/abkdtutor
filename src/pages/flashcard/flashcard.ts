@@ -28,7 +28,7 @@ export class FlashcardPage {
           text: 'ba'
         })
         }, 1000);
-        
+
        },
        'ba': function() {
         document.getElementById('symbol').src = "assets/imgs/3.png";
@@ -48,22 +48,29 @@ export class FlashcardPage {
         })
         }, 1000);
        },
-       'da': function() {
-        document.getElementById('symbol').src = "assets/imgs/5.png"; 
-        document.getElementById('letter').src = "assets/imgs/5.JPG"; 
+       'o': function() {
+        document.getElementById('symbol').src = "assets/imgs/5.png";
+       },
+       'u': function() {
+        document.getElementById('symbol').src = "assets/imgs/6.png";
        }
-     }; 
+     };
 
      annyang.debug(true);
      // Add our commands to annyang
-     annyang.addCommands(commands); 
+     annyang.addCommands(commands);
      annyang.setLanguage("fil-PH");
      // Start listening.
-     annyang.start({continuous: false}); 
+     annyang.start({continuous: false});
    }
 
     window.onload = function() {
-      document.getElementById('imageDiv').innerHTML = ''; 
+      document.getElementById('imageDiv').innerHTML = '';
+      Speech.speak({
+        text: 'a',
+        onError: (e) => {console.log('sorry an error occurred.', e)}, // optionnal error callback
+        onEnd: () => {console.log('your text has successfully been spoken.')} // optionnal onEnd callback
+      })
     }
   }
 
