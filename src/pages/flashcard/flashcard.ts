@@ -49,4 +49,11 @@ export class FlashcardPage {
       })
     }
   }
+
+ correct() {
+ 	document.getElementById('symbol').src = "assets/imgs/" + this.i + ".png";
+ 	document.getElementById('letter').src = "assets/imgs/" + this.i + ".JPG";
+ 	this.i++
+  }
+
 }
