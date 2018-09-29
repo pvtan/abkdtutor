@@ -10,29 +10,47 @@ declare var annyang: any;
 })
 export class FlashcardPage {
   constructor(public navCtrl: NavController) {
-    Speech.init();
+  Speech.init();
+  Speech.setLanguage('es-US');
+    setTimeout (function(){
+      Speech.speak({
+        text: 'ah'
+      })
+    }, 1000);
     if (annyang) {
      // Let's define a command.
      var commands = {
       'ah': function() {
         document.getElementById('symbol').src = "assets/imgs/2.png";
-       },
-       'eh': function() {
-        document.getElementById('symbol').src = "assets/imgs/3.png";
-       },
-       'e': function() {
-        document.getElementById('symbol').src = "assets/imgs/4.png";
-       },
-       'o': function() {
-        document.getElementById('symbol').src = "assets/imgs/5.png"; 
-       },
-       'oh': function() { 
-        document.getElementById('symbol').src = "assets/imgs/6.png";
-        Speech.speak({
-          text: 'Congratulations! You have a chocolate',
-          onError: (e) => {console.log('sorry an error occurred.', e)}, // optionnal error callback
-          onEnd: () => {console.log('your text has successfully been spoken.')} // optionnal onEnd callback
+        document.getElementById('letter').src = "assets/imgs/2.JPG";
+        setTimeout (function(){
+          Speech.speak({
+          text: 'ba'
         })
+        }, 1000);
+        
+       },
+       'ba': function() {
+        document.getElementById('symbol').src = "assets/imgs/3.png";
+        document.getElementById('letter').src = "assets/imgs/3.JPG";
+        setTimeout (function(){
+          Speech.speak({
+          text: 'ka'
+        })
+        }, 1000);
+       },
+       'ka': function() {
+        document.getElementById('symbol').src = "assets/imgs/4.png";
+        document.getElementById('letter').src = "assets/imgs/4.JPG";
+        setTimeout (function(){
+          Speech.speak({
+          text: 'da'
+        })
+        }, 1000);
+       },
+       'da': function() {
+        document.getElementById('symbol').src = "assets/imgs/5.png"; 
+        document.getElementById('letter').src = "assets/imgs/5.JPG"; 
        }
      }; 
 
