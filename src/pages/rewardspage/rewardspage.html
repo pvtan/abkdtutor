@@ -8,18 +8,20 @@
 
 <ion-content>
     <ion-card>
-
       <ion-list>
         <ion-item>Chocolates</ion-item>
         <ion-item>Chocolates</ion-item>
-        <ion-item></ion-item>
+        <ion-item id="output"></ion-item>
         <ion-item></ion-item>
 
       </ion-list>
     </ion-card>
 
-
-  <ion-fab right bottom>
+    <ion-item id="add">
+     <ion-input type="text" [(ngModel)]="input" placeholder="Enter Reward..." id="input"></ion-input>
+     <button ion-button item-right (click)="addReward()">Add</button>
+    </ion-item>
+  <!-- <ion-fab right bottom>
     <button ion-fab color="primary" (click)="addReward()"><ion-icon name="add"></ion-icon></button>
-  </ion-fab>
+  </ion-fab> -->
 </ion-content>
