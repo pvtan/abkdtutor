@@ -25,7 +25,7 @@ export class HomePage {
               text: 'Hello, how are you today ?',
               onError: (e) => {console.log('sorry an error occurred.', e)}, // optionnal error callback
               onEnd: () => {console.log('your text has successfully been spoken.')} // optionnal onEnd callback
-            })
+          })
          }
        };
        annyang.debug(true);
