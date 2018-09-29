@@ -15,6 +15,18 @@
     update any existing page or create new pages.
   </p>
 
+  <ion-list>
+
+    <ion-item *ngFor="let word of words">
+      {{ word.text }}
+      <button ion-button outline color="secondary" item-right icon-right (click)="speak(word.text)">
+        Play
+        <ion-icon icon-only name="play"></ion-icon>
+      </button>
+    </ion-item>
+
+  </ion-list>
+
     <body>
         <span id="speech"></span>
         <span id="interim"></span>
