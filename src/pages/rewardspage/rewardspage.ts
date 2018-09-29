@@ -23,6 +23,10 @@ export class RewardsPage {
     } else {
       this.completed1="Not completed";
     }
+    if(localStorage.length<2){
+      console.log("less than")
+      this.isenabled=true;
+    }
   }
 
   addReward1() {
