@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { annyang } from 'annyang';
-import Speech from 'speak-tts'
+import Speech from 'speak-tts';
 declare var annyang: any;
 
 @Component({
@@ -13,40 +13,39 @@ export class FlashcardPage {
     Speech.init();
     if (annyang) {
      // Let's define a command.
-
      var commands = {
-      'a': function() {
+      'ah': function() {
         document.getElementById('symbol').src = "assets/imgs/2.png";
        },
-       'e': function() {
+       'eh': function() {
         document.getElementById('symbol').src = "assets/imgs/3.png";
        },
-       'i': function() {
+       'e': function() {
         document.getElementById('symbol').src = "assets/imgs/4.png";
        },
        'o': function() {
         document.getElementById('symbol').src = "assets/imgs/5.png"; 
        },
-       'u': function() {
+       'oh': function() { 
         document.getElementById('symbol').src = "assets/imgs/6.png";
+        Speech.speak({
+          text: 'Congratulations! You have a chocolate',
+          onError: (e) => {console.log('sorry an error occurred.', e)}, // optionnal error callback
+          onEnd: () => {console.log('your text has successfully been spoken.')} // optionnal onEnd callback
+        })
        }
      }; 
 
      annyang.debug(true);
      // Add our commands to annyang
-     annyang.addCommands(commands);
+     annyang.addCommands(commands); 
      annyang.setLanguage("fil-PH");
      // Start listening.
-     annyang.start({continuous: false});
+     annyang.start({continuous: false}); 
    }
 
     window.onload = function() {
       document.getElementById('imageDiv').innerHTML = ''; 
-      Speech.speak({
-        text: 'a',
-        onError: (e) => {console.log('sorry an error occurred.', e)}, // optionnal error callback
-        onEnd: () => {console.log('your text has successfully been spoken.')} // optionnal onEnd callback
-      })
     }
   }
 
