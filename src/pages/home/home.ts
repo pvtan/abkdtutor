@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { annyang } from 'annyang';
+declare var annyang: any;
 
 @Component({
   selector: 'page-home',
@@ -12,52 +14,22 @@ export class HomePage {
         alert('Please use Google Chrome for best experience');
       }
       window.onload = function() {
-          if (!(window.webkitSpeechRecognition) && !(window.speechRecognition)) {
-            upgrade();
-          } else {
-              var recognizing,
-            transcription = document.getElementById('speech'),
-            interim_span = document.getElementById('interim');
-            interim_span.style.opacity = '0.5';
-            function reset() {
-              recognizing = false;
-              interim_span.innerHTML = '';
-              transcription.innerHTML = '';
-              speech.start();
-            }
-            var speech = new webkitSpeechRecognition() || speechRecognition();
-            speech.continuous = true;
-            speech.interimResults = true;
-            speech.lang = 'fil-PH'; // check google web speech example source for more lanuages
-            speech.start(); //enables recognition on default
-            speech.onstart = function() {
-                // When recognition begins
-                recognizing = true;
-            };
-            speech.onresult = function(event) {
-              // When recognition produces result
-              var interim_transcript = '';
-              var final_transcript = '';
-              // main for loop for final and interim results
-              for (var i = event.resultIndex; i < event.results.length; ++i) {
-                if (event.results[i].isFinal) {
-                  final_transcript += event.results[i][0].transcript;
-                } else {
-                  interim_transcript += event.results[i][0].transcript;
-                }
-              }
-              transcription.innerHTML = final_transcript;
-              interim_span.innerHTML = interim_transcript;
-            };
-            speech.onerror = function(event) {
-                // Either 'No-speech' or 'Network connection error'
-                console.error(event.error);
-            };
-            speech.onend = function() {
-                // When recognition ends
-                reset();
-            };
-          }
+      if (annyang) {
+       // Let's define a command.
+       var transcription = document.getElementById('speech');
+       var commands = {
+         'hello': function() {
+           console.log("Welcome");
+           transcription.innerHTML = "hello";
+         }
+       };
+       annyang.debug(true);
+       // Add our commands to annyang
+       annyang.addCommands(commands);
+       // Start listening.
+       annyang.start({continuous: false});
+     }
+
       };
   }
 
