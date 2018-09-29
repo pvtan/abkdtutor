@@ -1,7 +1,4 @@
 page-welcomepage {
-  ion-icon{
-    size: large;
-  }
 
   .card-background-page {
     ion-card {
@@ -10,8 +7,27 @@ page-welcomepage {
       background-color: YELLOW;
     }
 
-    ion-button{
-      color: YELLOW;
+    ion-col{
+      padding: 25px;
+    }
+
+
+    #mombutton{
+      background-image: url(../assets/imgs/mom.png);
+      background-size: cover;
+      border: 2px solid black;
+      padding: 25px;
+      background-repeat: no-repeat;
+      align-items: flex-start;
+    }
+
+    #babybutton{
+      background-image: url(../assets/imgs/baby.png);
+      background-size: cover;
+      border: 2px solid black;
+      padding: 25px;
+      background-repeat: no-repeat;
+      align-items: flex-end;
     }
 
   }
