@@ -2,16 +2,13 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
 @Component({
-  selector: 'page-contact',
-  templateUrl: 'contact.html'
+  selector: 'page-flashcard',
+  templateUrl: 'flashcard.html'
 })
-export class ContactPage {
+export class FlashcardPage {
 
   constructor(public navCtrl: NavController) {
-
+  	
   }
-
-  
-
 
 }

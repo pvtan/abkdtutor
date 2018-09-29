@@ -7,6 +7,9 @@ import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
+import { FlashcardPage } from '../pages/flashcard/flashcard';
+import { WelcomePage } from '../pages/welcomepage/welcomepage';
+import { RewardsPage } from '../pages/rewardspage/rewardspage';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -18,7 +21,10 @@ import { TextToSpeech } from '@ionic-native/text-to-speech';
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    FlashcardPage,
+    TabsPage,
+    WelcomePage,
+    RewardsPage
   ],
   imports: [
     BrowserModule,
@@ -30,7 +36,10 @@ import { TextToSpeech } from '@ionic-native/text-to-speech';
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    FlashcardPage,
+    TabsPage,
+    WelcomePage,
+    RewardsPage
   ],
   providers: [
     StatusBar,
