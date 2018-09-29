@@ -2,4 +2,17 @@ page-welcomepage {
   ion-icon{
     size: large;
   }
+
+  .card-background-page {
+    ion-card {
+      position: relative;
+      text-align: center;
+      background-color: YELLOW;
+    }
+
+    ion-button{
+      color: YELLOW;
+    }
+
+  }
 }

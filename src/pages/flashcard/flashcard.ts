@@ -8,7 +8,10 @@ import { NavController } from 'ionic-angular';
 export class FlashcardPage {
   i: number = 2;
   constructor(public navCtrl: NavController) {
-  	
+
+    window.onload = function() {
+      document.getElementById('imageDiv').innerHTML = '';
+    }
   }
 
  correct() {
