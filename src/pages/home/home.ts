@@ -10,8 +10,6 @@ declare var annyang: any;
 export class HomePage {
 
   constructor(public navCtrl: NavController) {
-<<<<<<< HEAD
-=======
         function upgrade() {
         alert('Please use Google Chrome for best experience');
       }
@@ -33,7 +31,6 @@ export class HomePage {
      }
 
       };
->>>>>>> 21a2241d26b1fba1bba0dd1b0ddaad362f617465
   }
 
 }
