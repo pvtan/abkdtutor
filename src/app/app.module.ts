@@ -7,6 +7,7 @@ import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
+import { FlashcardPage } from '../pages/flashcard/flashcard';
 import { WelcomePage } from '../pages/welcomepage/welcomepage';
 import { RewardsPage } from '../pages/rewardspage/rewardspage';
 
@@ -19,6 +20,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     AboutPage,
     ContactPage,
     HomePage,
+    FlashcardPage,
     TabsPage,
     WelcomePage,
     RewardsPage
@@ -33,6 +35,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     AboutPage,
     ContactPage,
     HomePage,
+    FlashcardPage,
     TabsPage,
     WelcomePage,
     RewardsPage
