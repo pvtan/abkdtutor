@@ -25,12 +25,12 @@ export class FlashcardPage {
         document.getElementById('symbol').src = "assets/imgs/4.png";
        },
        'o': function() {
-        document.getElementById('symbol').src = "assets/imgs/5.png"; 
+        document.getElementById('symbol').src = "assets/imgs/5.png";
        },
        'u': function() {
         document.getElementById('symbol').src = "assets/imgs/6.png";
        }
-     }; 
+     };
 
      annyang.debug(true);
      // Add our commands to annyang
@@ -41,7 +41,7 @@ export class FlashcardPage {
    }
 
     window.onload = function() {
-      document.getElementById('imageDiv').innerHTML = ''; 
+      document.getElementById('imageDiv').innerHTML = '';
       Speech.speak({
         text: 'a',
         onError: (e) => {console.log('sorry an error occurred.', e)}, // optionnal error callback
