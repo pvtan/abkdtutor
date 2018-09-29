@@ -28,7 +28,7 @@ import { TextToSpeech } from '@ionic-native/text-to-speech';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
   ],
   bootstrap: [IonicApp],
   entryComponents: [

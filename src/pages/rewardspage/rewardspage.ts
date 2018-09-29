@@ -11,8 +11,9 @@ export class RewardsPage {
 
   }
 
-  public addReward(){
-
+  addReward() {
+    document.getElementById('output').innerHTML=this.input;
+    this.input="";
   }
 
 
