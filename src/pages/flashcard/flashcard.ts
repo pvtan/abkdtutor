@@ -55,7 +55,7 @@ export class FlashcardPage {
           localStorage.setItem("isCompleted", 1);
           Speech.setLanguage('en-US');
           Speech.speak({
-          text: 'You have completed level one. You will receive chocolates from mommy'
+          text: 'You have completed level one. You will receive'+localStorage.getItem('reward1')+' from mommy'
        });
        }
      };
