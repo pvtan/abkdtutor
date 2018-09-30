@@ -16,7 +16,7 @@ export class RewardsPage {
     console.log(localStorage.getItem('isCompleted'))
     this.input1 = localStorage.getItem('reward1')
     this.input2 = localStorage.getItem('reward2')
-    //localStorage.setItem('isCompleted',0)
+    localStorage.setItem('isCompleted',0)
     if(localStorage.getItem('isCompleted') == 1) {
       console.log("EQUAL TO 1")
       this.completed1="Completed";
